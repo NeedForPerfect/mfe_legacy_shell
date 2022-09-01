@@ -1,17 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { data } from '../../another-bootstrap';
 
 @Component({
   selector: 'app-b',
   templateUrl: './b.component.html',
-  styleUrls: ['./b.component.css']
+  styleUrls: ['./b.component.css'],
 })
-export class BComponent implements OnInit {
+export class BComponent {
 
-  constructor() { }
+  constructor(
+    private cd: ChangeDetectorRef
+  ) {
+  }
+
+  subs = new Subscription();
+  valueFromLegacyApp;
 
   ngOnInit(): void {
-    data.subscribe((val) => console.log('New value - ', val));
+    this.subs.add(
+      data.subscribe((val) => {
+        this.valueFromLegacyApp = val;
+        this.cd.detectChanges();
+      })
+    );
+  }
+
+  ngOnDestroy(): void {
+    this.subs.unsubscribe();
   }
 
 }

@@ -87,8 +87,7 @@ const config = {
 		new ModuleFederationPlugin({
 			name: "shell",
 			remotes: {
-				angular1: "angular1@http://localhost:4202/remoteEntry.js",
-				// mfe1: "mfe1@http://localhost:3001/remoteEntry.js"
+				angular1: "angular1@http://localhost:4202/remoteEntry.js"
 			  }
 		  }),
 	],
