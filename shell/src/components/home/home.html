@@ -1,0 +1,81 @@
+<div class="container">
+	<h1>{{$ctrl.heading}}</h1>
+	<div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+		<div class="card border-primary">
+			<div class="card-header bg-primary text-white btn-link" role="tab" id="headingOne">
+				<div role="button" data-toggle="collapse"
+					class="accordion-toggle" data-parent="#accordion"
+					href="#collapseOne" aria-expanded="true"
+					aria-controls="collapseOne">
+					Collapsible Group Item #1
+				</div>
+			</div>
+			<div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+				<div class="card-body">
+					Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+					non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
+					put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+					labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+					beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable
+					VHS.
+				</div>
+			</div>
+		</div>
+		<div class="card border-primary">
+			<div class="card-header bg-primary text-white btn-link" role="tab" id="headingTwo">
+				<div class="collapsed accordion-toggle" role="button"
+					data-toggle="collapse" data-parent="#accordion"
+					href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+					Collapsible Group Item #2
+				</div>
+			</div>
+			<div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+				<div class="card-body">
+					Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+					non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
+					put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+					labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+					beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable
+					VHS.
+				</div>
+			</div>
+		</div>
+		<div class="card border-primary">
+			<div class="card-header bg-primary text-white btn-link" role="tab" id="headingThree">
+				<div class="collapsed accordion-toggle" role="button"
+					data-toggle="collapse" data-parent="#accordion" href="#collapseThree"
+					aria-expanded="false" aria-controls="collapseThree">
+					Collapsible Group Item #3
+				</div>
+			</div>
+			<div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+				<div class="card-body">
+					Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+					non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
+					put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+					labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+					beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable
+					VHS.
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<br>
+	<div class="checkbox">
+		<input type="checkbox" id="check1" />
+		<label for="check1">Remember Me?</label>
+	</div>
+</div>
+
+<div>
+	<p id="ng-container"></p>
+	<p id="container"></p>
+	<p id="ng-container-another" ng-on-click="$ctrl.onClickContainer()">
+		container
+	</p>
+
+	<p id="change-value" ng-on-click="$ctrl.changeValue()">
+		Change Value
+	</p>
+</div>

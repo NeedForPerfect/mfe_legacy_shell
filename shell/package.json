@@ -1,0 +1,53 @@
+{
+  "name": "angularjs-es6-starter-kit",
+  "version": "2.3.0",
+  "description": "AngularJS aka Angular 1, ES6, Webpack Starter Kit Project which includes Bootstrap 4 also.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --progress",
+    "build": "NODE_ENV=production webpack",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve-build": "yarn build && node ./index.js"
+  },
+  "repository": {
+    "url": "https://github.com/hardikkaji/angularjs-es6-starter-kit.git"
+  },
+  "keywords": [],
+  "author": "Hardik Kaji",
+  "license": "ISC",
+  "devDependencies": {
+    "@angular-architects/module-federation": "^14.3.0",
+    "@angular-architects/module-federation-tools": "^14.3.0",
+    "@babel/core": "7.14.3",
+    "@babel/preset-env": "7.14.4",
+    "babel-loader": "8.2.2",
+    "babel-plugin-angularjs-annotate": "0.10.0",
+    "clean-webpack-plugin": "3.0.0",
+    "css-loader": "5.2.6",
+    "css-minimizer-webpack-plugin": "^3.0.1",
+    "express": "4.17.1",
+    "file-loader": "6.2.0",
+    "html-loader": "2.1.2",
+    "html-webpack-plugin": "5.3.1",
+    "mini-css-extract-plugin": "1.6.0",
+    "node-sass": "6.0.0",
+    "sass-loader": "12.0.0",
+    "style-loader": "2.0.0",
+    "terser-webpack-plugin": "5.3.6",
+    "url-loader": "4.1.1",
+    "webpack": "^5.5.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "3.11.0"
+  },
+  "dependencies": {
+    "angular": "1.8.2",
+    "angular-ui-router": "1.0.29",
+    "bootstrap": "4.6.0",
+    "external-remotes-plugin": "^1.0.0",
+    "font-awesome": "4.7.0",
+    "jquery": "3.6.0",
+    "popper.js": "1.16.1",
+    "zone.js": "0.10.2",
+    "rxjs": "6.6.0"
+  }
+}

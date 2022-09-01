@@ -1,0 +1,16 @@
+version: '2.0'
+services:
+  mfe-old-ng-prog:
+    build:
+      context: ./shell
+    ports:
+      - "3000:80"
+    container_name: old-mfe-ng
+    stdin_open: true
+  mfe-new-ng-prog:
+    build:
+      context: ./mfe
+    ports:
+      - "4202:80"
+    container_name: new-mfe-ng
+    stdin_open: true

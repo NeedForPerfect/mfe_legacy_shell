@@ -1,0 +1,16 @@
+.card-header {
+	.accordion-toggle {
+		cursor: pointer;
+
+		&:after{
+			/* symbol for "opening" cards */
+			font-family: 'FontAwesome';  /* essential for enabling glyphicon */
+			content: "\f077";    /* adjust as needed, taken from bootstrap.css */
+			float: right;        /* adjust as needed */
+		}
+		&.collapsed:after {
+			/* symbol for "collapsed" cards */
+			content: "\f078";    /* adjust as needed, taken from bootstrap.css */
+		}
+	}
+}
