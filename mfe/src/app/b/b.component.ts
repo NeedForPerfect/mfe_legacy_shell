@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component } from '@angular/core';
+import { ChangeDetectorRef, Component, VERSION } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { data } from '../../another-bootstrap';
 
@@ -9,13 +9,14 @@ import { data } from '../../another-bootstrap';
 })
 export class BComponent {
 
+  ngVersion = VERSION.full;
+  subs = new Subscription();
+  valueFromLegacyApp;
+
   constructor(
     private cd: ChangeDetectorRef
   ) {
   }
-
-  subs = new Subscription();
-  valueFromLegacyApp;
 
   ngOnInit(): void {
     this.subs.add(
