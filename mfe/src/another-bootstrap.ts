@@ -7,4 +7,4 @@ bootstrap(AnotherModule, {
   production: environment.production
 });
 
-export const data = new BehaviorSubject('default');
+export const data = new BehaviorSubject('');

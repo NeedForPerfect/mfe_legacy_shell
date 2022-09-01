@@ -3,12 +3,16 @@ import 'zone.js';
 export default class HomeController {
 	dataSubject;
 	inputValue;
+	secondComponentLoaded = false;
 	constructor($log) {
 		'ngInject';
 		this.$log = $log;
 	}
 
 	onInputChanged() {
+	  if (!this.secondComponentLoaded) {
+		this.inputValue = '';
+	  }
 	  if (this.dataSubject) {
 	    this.dataSubject.next(this.inputValue);
 	  }
@@ -25,6 +29,7 @@ export default class HomeController {
 				container.firstChild.remove();
 			}
 			container.appendChild(elm);
+			this.secondComponentLoaded = true;
 		});
 	}
 

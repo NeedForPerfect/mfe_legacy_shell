@@ -28,4 +28,11 @@ $fa-font-path: '~font-awesome/fonts/';
 @import 'elements/checkbox';
 
 
-
+.mfes-container {
+	padding-top: 150px;
+	display: flex;
+	justify-content: space-around;
+	align-self: center;
+	height: 600px;
+	margin-left: auto;
+}

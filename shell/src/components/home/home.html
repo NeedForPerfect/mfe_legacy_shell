@@ -1,17 +1,23 @@
 <div class="container">
 	<h1>{{$ctrl.heading}}</h1>
-	<input type="text" ng-change="$ctrl.onInputChanged()" ng-model="$ctrl.inputValue">
 
-	<button ng-on-click="$ctrl.onClikLoadSecondComponent()">
-		LOAD SECOND
+	<button type="button" class="btn btn-primary mb-3" ng-on-click="$ctrl.onClikLoadSecondComponent()">
+		LOAD SECOND MFE WITH INPUT BINDING
 	</button>
+	<div>
+		<input class="form-control" placeholder="type anything" type="text" ng-change="$ctrl.onInputChanged()" ng-model="$ctrl.inputValue">
+	</div>
 
 </div>
 
-<div>
-	CONTAINER FOR FIRST MFE COMPONENT:
-	<p id="ng-container"></p>
-	Lazy Load another part for SECOND MFE COMPONENT:
-	<p id="ng-container-another" ng-on-click="$ctrl.onClickContainer()">
+<div class="mfes-container">
+	<div>
+		FIRST MFE COMPONENT:
+		<p id="ng-container"></p>
+	</div>
+	<div>
+		Lazy Loaded second MFE:
+		<p id="ng-container-another" ng-on-click="$ctrl.onClickContainer()">
+	</div>
 	</p>
 </div>
