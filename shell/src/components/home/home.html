@@ -2,9 +2,10 @@
 	<h1>{{$ctrl.heading}}</h1>
 
 	<button type="button" class="btn btn-primary mb-3" ng-on-click="$ctrl.onClikLoadSecondComponent()">
-		LOAD SECOND MFE WITH INPUT BINDING
+		LOAD SECOND MFE
 	</button>
 	<div>
+		<p>This input binded with second MFE component</p>
 		<input class="form-control" placeholder="type anything" type="text" ng-change="$ctrl.onInputChanged()" ng-model="$ctrl.inputValue">
 	</div>
 
@@ -12,11 +13,11 @@
 
 <div class="mfes-container">
 	<div>
-		FIRST MFE COMPONENT:
+		First MFE component:
 		<p id="ng-container"></p>
 	</div>
 	<div>
-		Lazy Loaded second MFE:
+		Lazy-loaded second MFE component:
 		<p id="ng-container-another" ng-on-click="$ctrl.onClickContainer()">
 	</div>
 	</p>
