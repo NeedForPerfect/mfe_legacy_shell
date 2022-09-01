@@ -24,6 +24,9 @@ export default class HomeController {
 			const { elementName } = module;
 			const elm = document.createElement(elementName);
 			const container = document.getElementById('ng-container');
+			if (container.firstChild) {
+				container.firstChild.remove();
+			}
 			container.appendChild(elm);
 		});
 	}
