@@ -8,3 +8,4 @@ bootstrap(AnotherModule, {
 });
 
 export const data = new BehaviorSubject('');
+export const elementName = 'angular2-element';

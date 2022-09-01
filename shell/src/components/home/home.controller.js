@@ -21,9 +21,9 @@ export default class HomeController {
 	onClikLoadSecondComponent() {
 		import('angular1/another').then(module => {
 			console.log('Import Angular, - ', module);
-			const { data } = module;
+			const { data, elementName } = module;
 			this.dataSubject = data;
-			const elm = document.createElement('angular2-element');
+			const elm = document.createElement(elementName);
 			const container = document.getElementById('ng-container-another');
 			if (container.firstChild) {
 				container.firstChild.remove();
@@ -39,7 +39,8 @@ export default class HomeController {
 
 		import('angular1/web-components').then(module => {
 			console.log('Import Angular, - ', module);
-			const elm = document.createElement('angular1-element');
+			const { elementName } = module;
+			const elm = document.createElement(elementName);
 			const container = document.getElementById('ng-container');
 			container.appendChild(elm);
 		});

@@ -5,3 +5,5 @@ import { environment } from './environments/environment.prod';
 bootstrap(AppModule, {
   production: environment.production
 });
+
+export const elementName = 'angular1-element';

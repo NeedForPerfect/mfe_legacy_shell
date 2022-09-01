@@ -4,6 +4,7 @@ import { createCustomElement } from '@angular/elements';
 import { HttpClientModule } from '@angular/common/http';
 
 import { BComponent } from './b/b.component';
+import { elementName } from 'src/another-bootstrap';
 
 @NgModule({
   imports: [
@@ -25,7 +26,7 @@ export class AnotherModule {
 
   ngDoBootstrap() {
     const customElement = createCustomElement(BComponent, {injector: this.injector});
-    customElements.define('angular2-element', customElement);
+    customElements.define(elementName, customElement);
   }
 
 }
