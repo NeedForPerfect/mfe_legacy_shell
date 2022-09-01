@@ -19,6 +19,19 @@ export default class HomeController {
 	}
 
 	onClikLoadSecondComponent() {
+		import('angular1/web-components').then(module => {
+			console.log('Import Angular, - ', module);
+			const { elementName } = module;
+			const elm = document.createElement(elementName);
+			const container = document.getElementById('ng-container');
+			container.appendChild(elm);
+		});
+	}
+
+	$onInit = () => {
+		this.heading = 'Legacy Angular Project 1.8v';
+		this.$log.info('Activated Home View.');
+
 		import('angular1/another').then(module => {
 			console.log('Import Angular, - ', module);
 			const { data, elementName } = module;
@@ -31,19 +44,5 @@ export default class HomeController {
 			container.appendChild(elm);
 			this.secondComponentLoaded = true;
 		});
-	}
-
-	$onInit = () => {
-		this.heading = 'Legacy Angular Project 1.8v';
-		this.$log.info('Activated Home View.');
-
-		import('angular1/web-components').then(module => {
-			console.log('Import Angular, - ', module);
-			const { elementName } = module;
-			const elm = document.createElement(elementName);
-			const container = document.getElementById('ng-container');
-			container.appendChild(elm);
-		});
-
 	};
 }
