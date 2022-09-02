@@ -5,7 +5,7 @@ docker-compose up --build
 OR run APP's separatelly
 
    shell
-      1. cd shell;
+      1. cd shell; </br>
       2. yarn install;
       3. yarn start;
 
