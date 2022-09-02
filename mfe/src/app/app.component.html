@@ -9,7 +9,9 @@
     <a (click)="clicked.emit(message)">{{message}}</a>
 </p>
 
-<p (click)="makeRequest()">Make Request</p>
+<button type="button" class="btn btn-primary mb-3" (click)="makeRequest()">
+    Make request
+</button>
 
 <div *ngFor="let user of users">
   {{ user.name }}
