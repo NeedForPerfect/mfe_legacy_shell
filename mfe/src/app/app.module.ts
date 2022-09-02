@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { elementName } from 'src/bootstrap';
 import { RouterModule, Routes } from '@angular/router';
+import { NestedComponent } from './nested/nested.component';
 
 const routes: Routes = [
   {
@@ -21,7 +22,8 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
   ],
   declarations: [
-    AppComponent
+    AppComponent,
+    NestedComponent
   ],
   bootstrap: []
 })

@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, EventEmitter, Input, Output, VERSION } from '@angular/core';
+import { Component, EventEmitter, Input, Output, VERSION, ViewEncapsulation } from '@angular/core';
 import { users$ } from './../bootstrap';
 
 declare const require: any;
@@ -7,7 +7,8 @@ declare const require: any;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss'],
+  encapsulation: ViewEncapsulation.ShadowDom,
 })
 export class AppComponent {
 

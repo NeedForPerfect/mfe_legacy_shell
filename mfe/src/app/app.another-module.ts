@@ -22,8 +22,6 @@ export class AnotherModule {
     ) {
   }
 
-
-
   ngDoBootstrap() {
     const customElement = createCustomElement(BComponent, {injector: this.injector});
     customElements.define(elementName, customElement);
