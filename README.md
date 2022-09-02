@@ -1,15 +1,15 @@
 If you have docker it is pretty simple, the following command will setup and run all the services for you.
 
-docker-compose up --build
+<h1>docker-compose up --build</h1>
 
-OR run APP's separatelly
+<p>OR run APP's separatelly</p>
 
-   shell
-      1. cd shell; </br>
-      2. yarn install;
-      3. yarn start;
+   <h3>shell</h3>
+      1. cd shell;</br>
+      2. yarn install;</br>
+      3. yarn start;</br>
 
-   mfe -
-      1. cd mfe;
-      2. npm i;
-      3. ng serve;
+   <h3>mfe</h3>
+      1. cd mfe;</br>
+      2. npm i;</br>
+      3. ng serve;</br>
