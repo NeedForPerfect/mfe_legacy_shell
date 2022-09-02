@@ -29,10 +29,14 @@ $fa-font-path: '~font-awesome/fonts/';
 
 
 .mfes-container {
-	padding-top: 150px;
 	display: flex;
 	justify-content: space-around;
 	align-self: center;
 	height: 600px;
 	margin-left: auto;
+}
+
+.users-container {
+	height: 150px;
+	overflow-y: scroll;
 }

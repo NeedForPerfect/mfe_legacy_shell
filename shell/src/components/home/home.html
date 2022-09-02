@@ -7,7 +7,7 @@
 	<div>
 		<p>This input binded with MFE</p>
 		<input class="form-control" placeholder="type anything" type="text" ng-change="$ctrl.onInputChanged()" ng-model="$ctrl.inputValue">
-		<div>
+		<div class="users-container">
 			Users from Second MFE component:
 			<div ng-repeat="user in $ctrl.users">
 				<td>{{ user.name }}</td>
