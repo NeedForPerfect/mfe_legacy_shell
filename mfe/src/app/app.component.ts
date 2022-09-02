@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, Input, Output, VERSION } from '@angular/core';
+import { users$ } from './../bootstrap';
 
 declare const require: any;
 
@@ -26,17 +27,9 @@ export class AppComponent {
   }
 
   makeRequest(): void {
-    this.http.get('https://jsonplaceholder.typicode.com/users').subscribe(res => {
+    this.http.get('https://jsonplaceholder.typicode.com/users').subscribe((res: any[]) => {
       this.users = res;
+      users$.next(res);
     });
   }
-
-  // constructor(private router: Router) { }
-
-  // ngOnInit(): void {
-  //   this.router.navigateByUrl(location.pathname.substr(1));
-  //   window.addEventListener('popstate', () => {
-  //     this.router.navigateByUrl(location.pathname.substr(1));
-  //   });
-  // }
 }

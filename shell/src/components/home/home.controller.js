@@ -1,12 +1,15 @@
 import 'zone.js';
 
 export default class HomeController {
+	$scope;
 	dataSubject;
 	inputValue;
+	users;
 	secondComponentLoaded = false;
-	constructor($log) {
+	constructor($log, $scope) {
 		'ngInject';
 		this.$log = $log;
+		this.$scope = $scope;
 	}
 
 	onInputChanged() {
@@ -21,11 +24,18 @@ export default class HomeController {
 	onClikLoadSecondComponent() {
 		import('angular1/web-components').then(module => {
 			console.log('Import Angular, - ', module);
-			const { elementName } = module;
+			const { elementName, users$ } = module;
 			const elm = document.createElement(elementName);
 			const container = document.getElementById('ng-container');
 			if (container.firstChild) {
 				container.firstChild.remove();
+			}
+			if (!this.usersSubject) {
+				users$.subscribe(users => {
+					console.log('Got users from MFE', users);
+					this.users = users;
+					this.$scope.$apply();
+				});
 			}
 			container.appendChild(elm);
 		});
